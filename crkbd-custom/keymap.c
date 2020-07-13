@@ -317,8 +317,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #endif
     // set_timelog();
   }
-  static uint16_t my_colon_timer;
-
   switch (keycode) {
     case LOWER:
       if (record->event.pressed) {
