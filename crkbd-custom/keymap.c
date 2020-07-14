@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |SHIFT/( |   Z  |  X   |  C   |  V   |  B   |                  |  N   |  M   |  ,   |  .   |  /   |SHIFT/) |
  * '----------------------+------+------+------+                  |------+------+------+----------------------'
  *                        |      |      |      |                  |      |      |      |
- *                        | CMD  |SH/ENT| LOW  |                  |  UP  |MET/  | LEAD |
+ *                        | LOW |CTR/ENT| CMD  |                  | LEAD |MET/  |  UP  |
  *                        '--------------------'                  '--------------------'
  */
 
@@ -49,12 +49,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------.                ,---------------------------------------------.
     KC_LGESC,  KC_Q,  KC_W,  KC_E,  KC_R,  KC_T,                   KC_Y,  KC_U,  KC_I,  KC_O,  KC_P,  KC_BSPC,
   //|------+------+------+------+------+------|                |------+------+-------+------+-------+--------|
-    CTL_T(KC_TAB),  KC_A,  KC_S,  KC_D,  KC_F,  KC_G,                   KC_H,  KC_J,  KC_K,  KC_L, KC_SCLN,MT(MOD_LALT, KC_QUOT),
+    CTL_T(KC_TAB),  KC_A,  KC_S,  KC_D,  KC_F,  KC_G,            KC_H,  KC_J,  KC_K,  KC_L, KC_SCLN, ALT_T(KC_QUOT),
   //|------+------+------+------+------+------|                |------+------+-------+------+-------+--------|
     KC_LSPO,  KC_Z,  KC_X,  KC_C,  KC_V,  KC_B,                   KC_N,  KC_M,KC_COMM,KC_DOT,KC_SLSH,KC_RSPC,
   //|------+------+------+------+------+------+------|  |------+------+------+-------+------+-------+--------|
-    KC_LGUI, MT(MOD_LSFT, KC_ENT), LOWER,                         RAISE, MT(MOD_LALT, KC_SPC), KC_LEAD
-                              //`--------------------'  `--------------------'
+                         LOWER, CTL_T(KC_ENT), KC_LGUI,  KC_LEAD, ALT_T(KC_SPC), RAISE
+                           //`--------------------'     `--------------------'
   ),
 
 /*
